@@ -78,15 +78,15 @@ In order to show important incremental improvements, I provide a table with the 
 
 | Experiment Id | Description | Public Dice Score | Checkpoint |
 | --- | --- | --- | --- |
-| 1 | Supervised Only (10 epochs, CE loss) | 0.5569 | best_model_supervised.pth |
+| 1 | Supervised Only (10 epochs, CE loss) | 0.5569 | model_supervised.pth |
 | 2 | Semi-Supervised (25 epochs, CE loss) | 0.5910 | --- |
 | 3 | Semi-Supervised (50 epochs, CE loss) | 0.6058 | --- |
 | 4 | Semi-Supervised (100 epochs, CE loss) | 0.6413 |  --- |
-| 5 | Semi-Supervised (150 epochs, CE loss) | 0.6422 |  add |
-| 6 | Semi-Supervised (150 epochs, blr 4e-5, CE loss) | 0.6441 |  add |
-| 7 | Semi-Supervised (100 epochs, blr 4e-5, Ohem loss) | 0.6445 |  add |
-| 8 | Semi-Supervised (150 epochs, blr 4e-5, Consistency Reg) | 0.6473 |  add |
-| 9 | Semi-Supervised (150 epochs, blr 4e-5, Combined loss) | 0.6486 |  add |
+| 5 | Semi-Supervised (150 epochs, CE loss) | 0.6422 |  model_semi_blr2em5.pth |
+| 6 | Semi-Supervised (150 epochs, blr 4e-5, CE loss) | 0.6441 |  model_semi.pth |
+| 7 | Semi-Supervised (100 epochs, blr 4e-5, Ohem loss) | 0.6445 |  model_semi_100eps_ohem.pth |
+| 8 | Semi-Supervised (150 epochs, blr 4e-5, Consistency Reg) | 0.6473 |  model_semi_creg.pth |
+| 9 | Semi-Supervised (150 epochs, blr 4e-5, Combined loss) | 0.6486 |  model_semi_combloss.pth |
 |10 | Ensemble of 6, 8, 9 | 0.6599 |  --- |
 |11 | Ensemble of 6, 7, 8, 9 | 0.6642 |  --- |
 |12 | Ensemble of 5, 6, 7, 8, 9 | 0.6655 |  --- |
@@ -98,7 +98,7 @@ In order to show important incremental improvements, I provide a table with the 
 
 - [x] Fastest GPU Inference. My algorithm performs inference on 70 images of the public test dataset in ~ 4 minutes. 
 - [ ] Fastest CPU Inference. Not tested.
-- [x] Best custom model that does not use a highly abstracted API. The main model architecture is implemented in PyTorch. Only prediction refinement, I use the SAM2AutomaticMaskGenerator.
+- [x] Best custom model that does not use a highly abstracted API. The main model architecture is implemented in PyTorch. Only for prediction refinement, I use the SAM2AutomaticMaskGenerator.
 - [x] Most innovative use of unlabelled data. I use state-of-the-art semi supervised learning techniques to leverage the unlabeled data.
 - [x] Best documentation. The solution report is detailed and provides a clear explanation of the methodology, implementation, and results.
 
