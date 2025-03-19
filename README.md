@@ -1,5 +1,5 @@
 <div align="center">
-<h1>Solution Report of team CV for the Challenge "Core Values: A Geological Quest"</h1>
+<h1>1st Place 🏆 Solution Report of team CV for the Challenge "Core Values: A Geological Quest"</h1>
 <h2>Challenge Website: <a href="https://thinkonward.com/app/c/challenges/core-values">Link</a></h2>
 <h2>Team Member: Efstathios Karypidis</h2>
 <h2>Contact: stathiskaripidis@gmail.com </h2>
